@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{philologue/philologue}
+\usepackage{philologue-styles/philologue-styles}
+\usepackage{biblatex-philologue/biblatex-philologue}
+\newcommand{\CCSG}[1]{\ledsidenote{#1}}
+
+\newcommand{\reprise}[1]{\edlabel{alexandre:#1}}
+\newcommand{\reprisef}[1]{\edlabel{alexandre:#1:f}}
+\footparagraphX{B}
+\newcommand{\alexandre}[2]{%
+	\textbf{#2}%
+	\footnoteB{%
+		\ifthenelse{\equal{\lineref{alexandre:#1}}{\lineref{alexandre:#1:f}}}%
+		{\lineref{alexandre:#1}}%
+		{\lineref{alexandre:#1}-\lineref{alexandre:#1:f}}%
+	}}
+\newcommand{\alexandrefr}[1]{\textbf{#1}}
+\begin{document}
+\begin{pages}
+\begin{Leftside}
+\begin{greek}
+\beginnumbering
+\autopar
+\input{originaux/alexandre}
+\endnumbering
+\end{greek}
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\autopar
+\input{traductions/alexandre}
+\endnumbering
+\end{Rightside}
+
+\Pages
+\end{pages}
+\end{document}
