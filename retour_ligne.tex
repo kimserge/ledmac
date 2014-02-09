@@ -1,0 +1,18 @@
+\documentclass[10pt, a4paper,twoside]{memoir}
+\usepackage{fontspec}
+\usepackage[parapparatus]{eledmac}
+\usepackage{eledpar}
+\footparagraph{A}
+
+\begin{document}
+\beginnumbering
+\pstart
+\protect
+\noindent
+{\edtext{lorem}{\Afootnote{loreim A, lorieem B}}\\
+\edtext{ipsum}{\Afootnote{ipsium A}} dolor sit \edtext{amet}{\Afootnote{amit B}}\\
+\edtext{consectetuer}{\Afootnote{consectetor A}} adipiscing elit\\
+sed diam nonummy}
+\pend
+\endnumbering
+\end{document}
